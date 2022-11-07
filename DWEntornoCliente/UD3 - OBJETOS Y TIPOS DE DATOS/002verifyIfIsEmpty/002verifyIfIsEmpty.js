@@ -16,16 +16,5 @@ alert(isEmpty(schedule)); // false
 
 
 function isEmpty(objeto) {
-    let empty = true;
-
-    for (let key in objeto) {
-        if (objeto[key] == null) {
-            empty = true;
-        } else {
-            empty = false;
-            break;
-        }
-    }
-
-    return empty;
+    return (Object.keys(objeto).length === 0) ? true : false;
 }
