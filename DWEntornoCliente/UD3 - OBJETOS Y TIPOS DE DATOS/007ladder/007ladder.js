@@ -25,6 +25,7 @@ ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
 Tal enfoque es ampliamente usado entre las librerías JavaScript.*/
 "use strict";
 
+//* Al realizar un return en cada método continúa con el siguiente método encadenado.
 let ladder = {
     step: 0,
     up() {
