@@ -7,7 +7,7 @@ let b = new B();
 alert( a == b ); // true
 Si es posible, entonces proporcione un ejemplo de código.*/
 
-//* Es posible creando el objeto previamente y devolviéndolo en cada una de las funciones
+//* Es posible creando el objeto previamente y devolviendo ese objeto en cada una de las funciones.
 let objeto = {};
 
 function A() {
