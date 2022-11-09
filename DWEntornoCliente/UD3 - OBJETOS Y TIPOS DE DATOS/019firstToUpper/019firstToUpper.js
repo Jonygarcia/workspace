@@ -8,11 +8,7 @@ let cadena = prompt("Introduzca una cadena de texto");
 alert(ucFirst(cadena));
 
 function ucFirst(str) {
-    let newstr;
-
-    for (let i = 0; i < str.length; i++) {
-        i == 0 ? (newstr = str[0].toUpperCase()) : (newstr += str[i]);
-    }
-
-    return newstr;
+    if (str != "" || str != null) {
+        return str[0].toUpperCase() + str.slice(1);
+    } else return str;
 }
