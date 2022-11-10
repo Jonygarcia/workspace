@@ -6,6 +6,7 @@ let a = new A();
 let b = new B();
 alert( a == b ); // true
 Si es posible, entonces proporcione un ejemplo de código.*/
+"use strict";
 
 //* Es posible creando el objeto previamente y devolviendo ese objeto en cada una de las funciones.
 let objeto = {};
