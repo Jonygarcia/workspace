@@ -28,4 +28,4 @@ console.log(fruits);
 for (let fruit of fruits) {
     alert(fruit);
 }
-//!  El bucle for in está optimizado para objetos genéricos no para arrays, por tanto es más lento y no debemos usarlo
+//! El bucle for in está optimizado para objetos genéricos no para arrays, por tanto es más lento y no debemos usarlo

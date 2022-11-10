@@ -8,15 +8,14 @@ let thor = "Thor es el hijo de Odín";
 alert(thor.length); // 23
 
 //? Encontrar la letra o
-let count = 0;
-let pos = thor.toLowerCase().indexOf("o");
+let arrayThor = thor.toLowerCase().split("");
 
-while (pos != -1) {
-    pos = thor.toLowerCase().indexOf("o", pos + 1);
-    count++;
-}
+let arrCount = arrayThor.reduce((arr, value, i) => {
+    if (value === "o") arr.push(i);
+    return arr;
+}, []);
 
-alert(count); // En la frase hay 3 letras "o" sin diferenciar mayúsculas y minúsculas
+alert(arrCount); // 2, 14, 19 son las posiciones donde hay una vocal o, no case sensitive.
 
 //? Encontrar el carácter que ocupa la posición 3
 alert(thor.charAt(3)); // r
