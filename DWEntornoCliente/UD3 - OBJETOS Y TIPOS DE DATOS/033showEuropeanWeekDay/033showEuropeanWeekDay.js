@@ -8,9 +8,9 @@ Una vez lo obtengas, tradúcelo a español.*/
 
 let date = new Date(2012, 0, 3);
 
-alert( getLocalDay(date) );
+alert(getLocalDay(date));
 
-function getLocalDay(date){
+function getLocalDay(date) {
     let day = date.getDay();
 
     day = day === 0 ? 7 : day;
