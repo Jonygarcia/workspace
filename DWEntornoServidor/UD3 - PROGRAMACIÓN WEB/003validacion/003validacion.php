@@ -55,7 +55,7 @@ comportamiento. Tip: Investiga el uso de la función filter_var. -->
                 $url = "";
             }
 
-            if ($sex === [] || ($sex !== "Hombre" && $sex !== "Mujer")) {
+            if ($sex !== "Hombre" && $sex !== "Mujer") {
                 $allOk = false;
                 $sex = "";
             }
