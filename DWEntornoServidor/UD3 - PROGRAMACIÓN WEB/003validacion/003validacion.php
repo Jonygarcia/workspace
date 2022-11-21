@@ -80,7 +80,10 @@
             } else {
                 $allOk = false;
             }
-        } else if (!empty($_GET) && $allOk) {
+        } 
+        
+        
+        if (!empty($_GET) && $allOk) {
             echo "Formulario cumplimentado correctamente";
         } else {
         ?>
@@ -88,30 +91,30 @@
             <form action="003validacion.php" method="GET">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" name="name" value="<?= $name ?>" required>
+                    <input type="text" class="form-control" name="name" value="<?php if (isset($name)) echo $name ?>" required>
                 </div>
                 <div class="mb-3">
                     <label for="lastname" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" name="lastname" value="<?= $lastname ?>" required>
+                    <input type="text" class="form-control" name="lastname" value="<?php if (isset($lastname)) echo $lastname ?>" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" value="<?= $email ?>" required>
+                    <input type="email" class="form-control" name="email" value="<?php if (isset($email)) echo $email ?>" required>
                 </div>
                 <div class="mb-3">
                     <label for="url" class="form-label">URL Página Personal</label>
-                    <input type="url" class="form-control" name="url" value="<?= $url ?>" required>
+                    <input type="url" class="form-control" name="url" value="<?php if (isset($url)) echo $url ?>" required>
                 </div>
                 <div class="mb-3">
                     <label>Sexo</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sex" value="Hombre" id="male" <?php if ($sex === "Hombre" || $sex === "") echo "checked"; ?>>
+                        <input class="form-check-input" type="radio" name="sex" value="Hombre" id="male" <?php if (isset($sex) && ($sex === "Hombre" || $sex === "")) echo "checked"; ?>>
                         <label class="form-check-label" for="male">
                             Hombre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sex" value="Mujer" id="female" <?php if ($sex === "Mujer") echo "checked"; ?>>
+                        <input class="form-check-input" type="radio" name="sex" value="Mujer" id="female" <?php if (isset($sex) && ($sex === "Mujer")) echo "checked"; ?>>
                         <label class="form-check-label" for="female">
                             Mujer
                         </label>
@@ -124,29 +127,29 @@
                 <div class="mb-3">
                     <label class="d-block">Aficiones</label>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="hobbies[]" value="Deportes" <?php if (count($hobbies) > 0 && in_array("Deportes", $hobbies)) echo "checked" ?>>
+                        <input class="form-check-input" type="checkbox" name="hobbies[]" value="Deportes" <?php if (isset($hobbies) && (count($hobbies) > 0 && in_array("Deportes", $hobbies))) echo "checked" ?>>
                         <label class="form-check-label" for="hobbies[]">Deportes</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="hobbies[]" value="Música" <?php if (count($hobbies) > 0 && in_array("Música", $hobbies)) echo "checked" ?>>
+                        <input class="form-check-input" type="checkbox" name="hobbies[]" value="Música" <?php if (isset($hobbies) && (count($hobbies) > 0 && in_array("Música", $hobbies))) echo "checked" ?>>
                         <label class="form-check-label" for="hobbies[]">Música</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="hobbies[]" value="Viajar" <?php if (count($hobbies) > 0 && in_array("Viajar", $hobbies)) echo "checked" ?>>
+                        <input class="form-check-input" type="checkbox" name="hobbies[]" value="Viajar" <?php if (isset($hobbies) && (count($hobbies) > 0 && in_array("Viajar", $hobbies))) echo "checked" ?>>
                         <label class="form-check-label" for="hobbies[]">Viajar</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="hobbies[]" value="Videojuegos" <?php if (count($hobbies) > 0 && in_array("Videojuegos", $hobbies)) echo "checked" ?>>
+                        <input class="form-check-input" type="checkbox" name="hobbies[]" value="Videojuegos" <?php if (isset($hobbies) && (count($hobbies) > 0 && in_array("Videojuegos", $hobbies))) echo "checked" ?>>
                         <label class="form-check-label" for="hobbies[]">Videojuegos</label>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label>Menú favorito</label>
                     <select name="menu[]" class="form-select" multiple="true">
-                        <option value="Pizza" <?php if (count($favMenu) > 0 && in_array("Pizza", $favMenu)) echo "selected" ?>>Pizza</option>
-                        <option value="Hamburguesa" <?php if (count($favMenu) > 0 && in_array("Hamburguesa", $favMenu)) echo "selected" ?>>Hamburguesa</option>
-                        <option value="Ensalada" <?php if (count($favMenu) > 0 && in_array("Ensalada", $favMenu)) echo "selected" ?>>Ensalada</option>
-                        <option value="Croquetas" <?php if (count($favMenu) > 0 && in_array("Croquetas", $favMenu)) echo "selected" ?>>Croquetas</option>
+                        <option value="Pizza" <?php if (isset($favMenu) && (count($favMenu) > 0 && in_array("Pizza", $favMenu))) echo "selected" ?>>Pizza</option>
+                        <option value="Hamburguesa" <?php if (isset($favMenu) && (count($favMenu) > 0 && in_array("Hamburguesa", $favMenu))) echo "selected" ?>>Hamburguesa</option>
+                        <option value="Ensalada" <?php if (isset($favMenu) && (count($favMenu) > 0 && in_array("Ensalada", $favMenu))) echo "selected" ?>>Ensalada</option>
+                        <option value="Croquetas" <?php if (isset($favMenu) && (count($favMenu) > 0 && in_array("Croquetas", $favMenu))) echo "selected" ?>>Croquetas</option>
                     </select>
                 </div>
                 <input type="submit" name="Enviar" class="btn btn-primary">
