@@ -13,7 +13,7 @@ comportamiento. Tip: Investiga el uso de la función filter_var. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-    <title>002formulario</title>
+    <title>003validacion</title>
 </head>
 
 <body>
@@ -93,7 +93,7 @@ comportamiento. Tip: Investiga el uso de la función filter_var. -->
         } else {
         ?>
 
-            <form action="003validacion.php" method="GET">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre</label>
                     <input type="text" class="form-control" name="name" value="<?php if (isset($name)) echo $name ?>" required>
