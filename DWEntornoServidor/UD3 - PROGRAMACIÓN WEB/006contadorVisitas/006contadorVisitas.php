@@ -30,7 +30,7 @@ permitir que el usuario reinicialice su contador de visitas. -->
             <div class="row text-center justify-content-center">
                 <h3>¿Desea reiniciar el contador?</h3>
     
-                <button class="btn btn-primary col-2" type="input"><a href="006delete.php" class="">Reiniciar contador</a></button>
+                <button class="btn btn-primary col-2" type="input"><a href="006delete.php" class="text-white">Reiniciar contador</a></button>
              
             </div>
     </div>
