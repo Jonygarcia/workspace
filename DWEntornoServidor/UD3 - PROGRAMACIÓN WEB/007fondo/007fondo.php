@@ -24,7 +24,12 @@ próxima vez que se cargue la página, lo haga con el último color seleccionado
     ?>
 </head>
 
-<body class="<?php echo (isset($_COOKIE['color'])) ? ($bgColor === 'red' ? 'bg-redcolor' : ($bgColor === 'blue' ? 'bg-bluecolor' : ($bgColor === 'yellow' ? 'bg-yellowcolor' : ''))) : '' ?>">
+<body class="<?php echo (isset($_COOKIE['color'])) ? 
+        ($bgColor === 'red' ? 'bg-redcolor' : 
+        ($bgColor === 'blue' ? 'bg-bluecolor' : 
+        ($bgColor === 'yellow' ? 'bg-yellowcolor' : 
+        ''))) : 
+        '' ?>">
     <div class="container-fluid bg"></div>
     <div class="dropdown text-center mt-4">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
