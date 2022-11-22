@@ -29,7 +29,7 @@ recorriendo el array correspondiente. -->
     if ($user == "usuario") { ?>
         <nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-end">
             <div class="nav navbar-nav">
-            <a class="nav-item text-white text-decoration-none" href="012peliculas.php"><button class="btn btn-dark mx-2">Ir a Películas</button></a>
+                <a class="nav-item text-white text-decoration-none" href="012peliculas.php"><button class="btn btn-dark mx-2">Ir a Películas</button></a>
             </div>
             <div class="nav navbar-nav">
                 <a class="nav-item text-white text-decoration-none" href="013logout.php"><button class="btn btn-dark mx-2">Cerrar sesión</button></a>
@@ -38,11 +38,11 @@ recorriendo el array correspondiente. -->
         <div class="container col-4 mt-3 text-center">
             <h1 class="text-center mb-5 text-capitalize">Listado de series</h1>
             <ul class="list-group">
-            <?php 
+                <?php
                 foreach ($series as $value) {
-                    echo "<li class='list-group-item'>" . $value . "</li>";   
+                    echo "<li class='list-group-item'>" . $value . "</li>";
                 }
-            ?>
+                ?>
             </ul>
         </div>
     <?php } else { ?>

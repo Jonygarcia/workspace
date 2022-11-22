@@ -29,9 +29,9 @@ permitir que el usuario reinicialice su contador de visitas. -->
             <h2><?php if (isset($_COOKIE["accesos"])) echo $accesosPagina ?></h2>
             <div class="row text-center justify-content-center">
                 <h3>¿Desea reiniciar el contador?</h3>
-    
+
                 <button class="btn btn-primary col-2" type="input"><a href="006delete.php" class="text-white">Reiniciar contador</a></button>
-             
+
             </div>
     </div>
 

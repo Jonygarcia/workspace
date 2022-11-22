@@ -15,15 +15,15 @@ sesión y volver a la página anterior. -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
     <title>008fondoSesion1</title>
     <?php
-        session_start();
+    session_start();
 
-        if (isset($_POST["save"])) {
-            $color = $_SESSION["fondo"];
-        } else if (isset($_POST["delete"])) {
-            unset($_SESSION["fondo"]);
-            session_destroy();
-            session_start();
-        }
+    if (isset($_POST["save"])) {
+        $color = $_SESSION["fondo"];
+    } else if (isset($_POST["delete"])) {
+        unset($_SESSION["fondo"]);
+        session_destroy();
+        session_start();
+    }
     ?>
 </head>
 

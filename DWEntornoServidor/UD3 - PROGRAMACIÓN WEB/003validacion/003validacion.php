@@ -86,8 +86,8 @@ comportamiento. Tip: Investiga el uso de la función filter_var. -->
             } else {
                 $allOk = false;
             }
-        } 
-        
+        }
+
         if (!empty($_GET) && $allOk) {
             echo "Formulario cumplimentado correctamente";
         } else {
@@ -127,7 +127,7 @@ comportamiento. Tip: Investiga el uso de la función filter_var. -->
                 </div>
                 <div class="mb-3">
                     <label for="numConvivientes" class="form-label">Número de convivientes en el domicilio</label>
-                    <input type="number" class="form-control" min="1" value="<?php if (isset($numConvivientes)) echo $numConvivientes ?>" name="numConvivientes"  required>
+                    <input type="number" class="form-control" min="1" value="<?php if (isset($numConvivientes)) echo $numConvivientes ?>" name="numConvivientes" required>
                 </div>
                 <div class="mb-3">
                     <label class="d-block">Aficiones</label>

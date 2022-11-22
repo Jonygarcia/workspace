@@ -30,11 +30,11 @@ desordenada con tres películas. -->
         <div class="container col-4 mt-3 text-center">
             <h1 class="text-center mb-5 text-capitalize">Listado de películas</h1>
             <ul class="list-group">
-            <?php 
+                <?php
                 foreach ($peliculas as $value) {
-                    echo "<li class='list-group-item'>" . $value . "</li>";   
+                    echo "<li class='list-group-item'>" . $value . "</li>";
                 }
-            ?>
+                ?>
             </ul>
         </div>
     <?php } else { ?>
