@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let body = document.body;
+        body.innerHTML = "<!--" + body.tagName + "-->";
+        alert(body.firstChild.data); 
+        /*El script nos muestra "BODY", que es el texto que se ha insertado
+        en el comentario recogido por el .data, ya que hemos añadido al comentario 
+        el nombre de la etiqueta body mediante innerHTML, y .tagName lo recoge en mayúsculas*/
+    </script>
+</body>
+
+</html>

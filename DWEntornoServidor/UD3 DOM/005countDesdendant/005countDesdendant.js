@@ -5,7 +5,9 @@ El número de <li> anidados: todos los descendientes, incluidos los profundament
 anidados.*/
 "use strict";
 
-for (let li of document.querySelectorAll("li")) {
+let elementos = document.querySelectorAll("li");
+
+for (const li of elementos) {
 
     let tipo = li.firstChild.data;
     let cantidad = li.getElementsByTagName("li").length;

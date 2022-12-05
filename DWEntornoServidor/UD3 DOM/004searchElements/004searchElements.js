@@ -12,7 +12,7 @@ console.log(document.querySelectorAll("#age-table label"));
 
 //? El primer td en la tabla (con la palabra “Age”).
 
-console.log(document.getElementsByTagName('td')[0]);
+console.log(document.getElementsByTagName("td")[0]);
 
 //? El form con name="search".
 
