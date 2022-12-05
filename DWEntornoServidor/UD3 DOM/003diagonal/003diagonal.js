@@ -5,9 +5,8 @@ pintar todas las celdas diagonales de rojo. Necesitarás obtener todas las <td> 
 td.style.backgroundColor = 'red'; El resultado debe ser: */
 "use strict";
 
-let table = document.body.children[0];
+let table = document.body.firstElementChild;
 
 for (let i = 0; i < table.rows.length; i++) {
-    let row = table.rows[i];
-    row.cells[i].style.backgroundColor = 'red';
+    table.rows[i].cells[i].style.backgroundColor = 'red';
 }
