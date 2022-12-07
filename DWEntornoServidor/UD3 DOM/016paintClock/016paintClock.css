@@ -1,0 +1,15 @@
+#clock {
+    font-size: x-large;
+}
+
+#hour {
+    color: red;
+}
+
+#min {
+    color: green;
+}
+
+#sec {
+    color: blue;
+}
