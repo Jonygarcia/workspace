@@ -1,8 +1,17 @@
-th, td {
-   border: 1px solid black;
-   text-align: center;
+#calendar {
+    margin: 0;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+    font-size: large;
 }
 
 th {
     font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.411);
 }
