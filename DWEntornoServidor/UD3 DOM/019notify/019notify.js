@@ -3,7 +3,7 @@ notificación: <div class="notification"> con el contenido dado. La notificació
 desaparecer automáticamente después de 1.5 segundos. */
 "use strict";
 
-function showNotification({html, top = 0, right = 0,  className = ""}) {
+function showNotification({ html, top = 0, right = 0, className = "" }) {
 
     let divNotification = document.createElement("div");
 
@@ -17,6 +17,8 @@ function showNotification({html, top = 0, right = 0,  className = ""}) {
     divNotification.innerHTML = html;
 
     document.body.append(divNotification);
+
+    setTimeout(() => divNotification.remove(), 1500);
 }
 
 showNotification({
