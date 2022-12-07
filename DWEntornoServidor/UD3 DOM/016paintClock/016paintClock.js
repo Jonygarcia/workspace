@@ -4,7 +4,7 @@
 let clockStarted;
 
 function clockStart() {
-    clockStarted ? clockRunning() : clockStarted = setInterval(clockRunning, 1000); 
+    clockStarted ? clockRunning() : clockStarted = setInterval(clockRunning, 1000);
 }
 
 function clockStop() {
