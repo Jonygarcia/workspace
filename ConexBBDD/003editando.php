@@ -1,4 +1,4 @@
-<?php include_once "../conexion.php" ?>
+<?php include_once "conexion.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,10 +28,9 @@
 </head>
 
 <body>
-    <form class="mx-5" action="../editChamp.php" method="POST">
-        <div class="form-group" disabled hidden>
-            <label for="id">ID</label>
-            <input type="number" class="form-control" id="id" name="id" value="<?= $id ?>" required>
+    <form class="mx-5" action="editChamp.php" method="POST">
+        <div class="form-group ">
+            <input type="number" class="form-control" id="id" name="id" value="<?= $id ?>" hidden required>
         </div>
         <div class="form-group">
             <label for="name">Nombre</label>
@@ -58,7 +57,7 @@
         </div>
         <div class="form-group">
             <label for="description">Descripción</label>
-            <textarea class="form-control" id="description" name="description" rows="4" required><?= $descr ?></textarea>
+            <textarea class="form-control" id="description" name="description" rows="4" value="<?= $descr ?>" required><?= $descr ?></textarea>
         </div>
         <div class="form-group text-center">
             <input class=" mt-3 btn btn-primary" type="submit" name="Enviar">

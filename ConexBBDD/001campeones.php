@@ -1,7 +1,7 @@
-<?php include_once "../conexion.php" ?>
-<!-- Modifica el archivo 001campeones.php y guárdalo como 002campeones.php pero pon al lado 
-de cada uno de los campeones listados un botón para editar y otro para borrar. Cada uno de 
-esos botones hará la correspondiente función dependiendo del id del campeón seleccionado. -->
+<?php include_once "conexion.php" ?>
+<!-- Crea el archivo 001campeones.php donde listes todos los campeones del LOL que has metido 
+en tu base de datos. Acuérdate que para ello deberás hacer una conexión con la base de datos 
+y un foreach para cada campeón que tengas albergado en la tabla champ. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,13 +28,6 @@ esos botones hará la correspondiente función dependiendo del id del campeón s
                 Rol: $champion[rol]<br>
                 Dificultad: $champion[difficulty]<br>
                 Descripción: $champion[description]<br>";
-    ?>
-
-        <a href="../003editando/003editando.php?id=<?= $champion['id'] ?>"><button class="btn-dark bg-black text-white">Editar</button></a>
-        <a href=""><button class="btn-dark bg-black text-white">Borrar</button></a>
-
-    <?php
-        echo "<br>";
     }
     ?>
 </body>
