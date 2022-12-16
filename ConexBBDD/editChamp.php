@@ -13,5 +13,5 @@ $possibleDiff = ['Baja', 'Moderada', 'Alta'];
 if ($id != "" && $name != "" && in_array($rol, $possibleRole) && in_array($diff, $possibleDiff) && $descr != ""){
     $conn = connectBd();
 } else {
-   
+    echo "a";
 }
