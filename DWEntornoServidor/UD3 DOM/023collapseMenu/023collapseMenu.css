@@ -1,0 +1,25 @@
+.menu .title {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu .title::before {
+    font-size: 75%;
+    content: "▶";
+    color: blue;
+}
+
+.open .title::before {
+    content: "▼";
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.open ul {
+    display: block;
+}
