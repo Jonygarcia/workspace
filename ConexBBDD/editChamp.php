@@ -13,7 +13,8 @@ $possibleRole = ['Asesino', 'Luchador', 'Mago', 'Tirador', 'Apoyo', 'Tanque'];
 $possibleDiff = ['Baja', 'Moderada', 'Alta'];
 
 if ($id != "" && $name != "" && in_array($rol, $possibleRole) && in_array($diff, $possibleDiff) && $descr != ""){
-    $conn = connectBd();
+    
+    $conn = connectBd(); 
 
     $query = "UPDATE `champ` SET `name` = '$name' , `rol` = '$rol' , `difficulty` = '$diff' , `description` = '$descr' WHERE `id` = '$id'";
     mysqli_query($conn, $query);

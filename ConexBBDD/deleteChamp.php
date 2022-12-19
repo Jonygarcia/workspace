@@ -5,10 +5,8 @@ $conn = connectBd();
 
 $id = $_GET["id"];
 
-echo $id;
+$query = "DELETE FROM `champ` WHERE `id` = $id";
 
-// $query = "DELETE * FROM `champ` WHERE `id` = $id";
+mysqli_query($conn, $query);
 
-// mysqli_query($conn, $query);
-
-// header("Location: 002campeones.php");
+header("Location: 002campeones.php");
