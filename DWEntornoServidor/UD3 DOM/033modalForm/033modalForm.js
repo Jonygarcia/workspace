@@ -37,6 +37,7 @@ function showPrompt(html, callback) {
     modalDiv.onsubmit = () => {
         if (userText.value == "") {
             alert("Debes escribir un mensaje para mostrarlo");
+            userText.focus();
             return false;
         } else {
             removeCover();
