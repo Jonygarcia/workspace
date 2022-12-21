@@ -2,6 +2,6 @@
 del documento y leer su valor.*/
 "use strict";
 
-let elemento = document.querySelector('[data-widget-name]');
+let elemento = document.querySelector("[data-widget-name]");
 
-console.log(elemento.getAttribute('data-widget-name'));
+console.log(elemento.getAttribute("data-widget-name"));

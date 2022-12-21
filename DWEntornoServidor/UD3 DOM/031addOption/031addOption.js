@@ -3,7 +3,6 @@ Utiliza JavaScript para:
 Mostrar el valor y el texto del option seleccionado.
 Añadir un option: <option value="classic">Classic</option>.
 Seleccionarlo.*/
-
 "use strict";
 
 let optionSelected = genres.options[genres.selectedIndex];
