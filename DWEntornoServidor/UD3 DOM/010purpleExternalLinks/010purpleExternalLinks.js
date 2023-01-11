@@ -7,5 +7,6 @@ let links = document.querySelectorAll("a");
 for (const link of links) {
     let href = link.getAttribute("href");
 
-    if (href && href.includes("://") && !href.startsWith("http://internal.com")) link.style.color = "purple";
+    if (href && href.includes("://") && !href.startsWith("http://internal.com"))
+        link.style.color = "purple";
 }

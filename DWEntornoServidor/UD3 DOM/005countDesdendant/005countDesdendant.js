@@ -8,7 +8,6 @@ anidados.*/
 let elementos = document.querySelectorAll("li");
 
 for (const li of elementos) {
-
     let tipo = li.firstChild.data;
     let cantidad = li.getElementsByTagName("li").length;
 

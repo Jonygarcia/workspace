@@ -7,4 +7,3 @@ function handler() {
 }
 
 //* El alert no debería estar en la función ya que rompe el árbol de eventos y no se ejecuta correctamente.
-

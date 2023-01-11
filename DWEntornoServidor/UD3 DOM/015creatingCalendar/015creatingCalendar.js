@@ -6,14 +6,13 @@ primer día debe ser “lunes” y así hasta “domingo”.
 P.S. Para esta tarea es suficiente generar el calendario, no necesita aún ser pulsable.*/
 "use strict";
 
-createCalendar(calendar, 2022, 12)
+createCalendar(calendar, 2022, 12);
 
 function createCalendar(elem, year, month) {
-
     let fecha = new Date(year, month - 1);
 
     // Cabecera de la tabla
-    let tabla = "<tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr><tr>"
+    let tabla = "<tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr><tr>";
 
     // Espacios en blanco en los días del mes anterior
     //! Enero de 2023 es el único que me descuadra, he probado varias formas de solucionarlo y no tengo ni idea del motivo,
@@ -23,7 +22,7 @@ function createCalendar(elem, year, month) {
     }
 
     // Recorrer los días del mes, seteando en la fecha el siguiente día, cuando sea domingo saltar a la siguiente fila de la tabla
-    while (fecha.getMonth() == (month - 1)) {
+    while (fecha.getMonth() == month - 1) {
         tabla += "<td>" + fecha.getDate() + "</td>";
 
         if (getDay(fecha) == 7) {
@@ -34,7 +33,7 @@ function createCalendar(elem, year, month) {
     }
 
     // Espacios en blanco en los días del mes siguiente comprobando si es el último mes del año
-    if (getDay(fecha) > 0 && (month == 12)) {
+    if (getDay(fecha) > 0 && month == 12) {
         fecha = new Date(year + 1, 0);
         for (let i = getDay(fecha); i <= 7; i++) {
             tabla += "<td></td>";
