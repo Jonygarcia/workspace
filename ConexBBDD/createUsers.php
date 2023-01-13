@@ -19,3 +19,6 @@ function createUser($name, $username, $password, $email){
 createUser("Pepe", "Pepito", "holaquetal", "pepito22@gmail.com");
 createUser("Luis", "LuisitoComunica", "miperromola", "luisito@comunica.com");
 createUser("admin", "admin", "admin", "admin@admin.es");
+
+// Para ir al registro al crear los usuarios en la base de datos
+header('Location: 005registro.php');

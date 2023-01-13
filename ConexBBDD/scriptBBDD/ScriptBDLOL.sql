@@ -22,5 +22,5 @@ CREATE TABLE user(
     `name` VARCHAR(128) NOT NULL,
     `username` VARCHAR (128) NOT NULL UNIQUE,
     `password` VARCHAR(255) NOT NULL,
-    `email` VARCHAR(256) NOT NULL
+    `email` VARCHAR(256) NOT NULL UNIQUE
 );

@@ -12,16 +12,38 @@
 </head>
 
 <body>
-    <form action="" method="POST">
-        <div class="container col-8 col-lg-4">
-            <h2 class="text-center mt-5">INICIAR SESIÓN</h2>
+    <form action="checkLogin.php" method="POST">
+        <div class="container col-6 col-lg-3">
+            <h2 class="text-center mt-5 mb-5">INICIAR SESIÓN</h2>
+            <?php
+            if ($_GET) {
+                $msg = $_GET["login"];
+
+                if ($msg == "empty") {
+                    echo '
+                    <div class="alert alert-danger" role="alert">
+                    Debes especificar el nombre de usuario y la contraseña
+                    </div>';
+                } else if ($msg == "failed") {
+                    echo '
+                    <div class="alert alert-danger" role="alert">
+                    Contraseña incorrecta
+                    </div>';
+                } else if ($msg == "false") {
+                    echo '
+                    <div class="alert alert-danger" role="alert">
+                    El usuario introducido no existe
+                    </div>';
+                }
+            }
+            ?>
             <div class="mb-3">
                 <label for="username" class="form-label">Nombre de Usuario</label>
-                <input type="text" class="form-control" id="username" required>
+                <input type="text" class="form-control" id="username" name="username" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password">
+                <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary text-center">Iniciar sesión</button>

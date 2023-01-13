@@ -11,25 +11,47 @@
     <title>005registro</title>
 </head>
 
-<body>
-    <form action="" method="POST">
+<body>  
+    <form action="006nuevoUsuario.php" method="POST">
         <div class="container col-8 col-lg-4">
-            <h2 class="text-center mt-5">REGISTRO</h2>
-            <div class="mb-3 mt-5">
+            <h2 class="text-center mt-5 mb-5">REGISTRO</h2>
+            <?php
+            if ($_GET) {
+                $msg = $_GET["reg"];
+
+                if ($msg == "exist") {
+                    echo '
+                    <div class="alert alert-danger" role="alert">
+                    El nombre de usuario o el email ha sido registrado previamente.
+                    </div>';
+                } else if ($msg == "failed") {
+                    echo '
+                    <div class="alert alert-danger" role="alert">
+                    Se ha producido un error en el registro.
+                    </div>';
+                } else if ($msg == "empty") {
+                    echo '
+                    <div class="alert alert-danger" role="alert">
+                    Debes completar todos los campos para realizar el registro
+                    </div>';
+                }
+            }
+            ?>
+            <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" required>
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="mb-3">
                 <label for="username" class="form-label">Nombre de Usuario</label>
-                <input type="text" class="form-control" id="username" required>
+                <input type="text" class="form-control" id="username" name="username" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password">
+                <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="mb-3">
                 <p>¿Ya estás registrado? <a href="login.php">Iniciar sesión</a></p>
