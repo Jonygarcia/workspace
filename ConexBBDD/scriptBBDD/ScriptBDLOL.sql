@@ -17,3 +17,10 @@ INSERT INTO `champ` (`name`, `rol`, `difficulty`, `description`) VALUES
 ('Ashe', 'Tirador', 'Moderada', 'Ashe, comandante hija del hielo de la tribu de Avarosa, lidera las hordas más numerosas del norte. Impasible, inteligente e idealista, aunque incómoda en su papel de líder, utiliza los poderes mágicos ancestrales de su linaje para empuñar un arco de Hielo Puro. Su gente cree que Ashe es la heroína mitológica Avarosa reencarnada, y ella espera unificar Freljord una vez más al recuperar sus antiguas tierras tribales.'),
 ('Rengar', 'Asesino', 'Alta', 'Rengar es un feroz cazador de trofeos vastaya que vive por el placer de perseguir y asesinar criaturas peligrosas. Explora el mundo en busca de las bestias más aterradoras, pero, ante todo, quiere encontrar alguna pista que lo lleve hasta KhaZix, la criatura del Vacío que le arrebató un ojo. Rengar no acosa a su presa por comida ni por gloria, sino únicamente por la belleza de la persecución.');
 
+CREATE TABLE user(
+	`id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(128) NOT NULL,
+    `username` VARCHAR (128) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(256) NOT NULL
+);
