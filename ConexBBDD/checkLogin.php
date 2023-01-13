@@ -18,7 +18,7 @@ if ($_POST) {
         $query->setFetchMode(PDO::FETCH_ASSOC);
         $query->execute();
 
-        while($row = $query -> fetch()) {
+        while ($row = $query->fetch()) {
             if ($username == $row["username"]) {
                 $exist = true;
                 break;
@@ -29,11 +29,11 @@ if ($_POST) {
             $sql = "SELECT * FROM user WHERE `username` = ?";
 
             $query = $conn->prepare($sql);
-            $query->execute([$username]); 
-    
+            $query->execute([$username]);
+
             $user = $query->fetch();
-    
-            if($user && password_verify($password, $user['password'])){
+
+            if ($user && password_verify($password, $user['password'])) {
                 $conn = null;
                 header("Location: 003campeones.php");
             } else {

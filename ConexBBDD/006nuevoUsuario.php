@@ -1,4 +1,4 @@
-<?php include_once "conexion.php"?>
+<?php include_once "conexion.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,21 +15,21 @@
 
 <body>
     <?php
-    if ($_POST){
+    if ($_POST) {
 
         $name = $_POST["name"] ?? "";
         $username = $_POST["username"] ?? "";
         $email = $_POST["email"] ?? "";
         $password = $_POST["password"] ?? "";
-    
+
         //* No valido con expresiones regulares porque voy justo de tiempo
-    
+
         if ($name != "" && $username != "" && $email != "" && $password != "") {
             try {
                 $conn = connectBdPDO();
-    
+
                 $sql = "INSERT INTO user(`name`, `username`, `password`, `email`) VALUES (:name, :username, :password, :email)";
-    
+
                 $query = $conn->prepare($sql);
                 $query->execute([
                     "name" => $name,
@@ -37,16 +37,15 @@
                     "password" => password_hash($password, PASSWORD_DEFAULT),
                     "email" => $email
                 ]);
-    
+
                 echo '
                     <div class="alert alert-success" role="alert">
                     Te has registrado con éxito ' . $name . '!! Tus credenciales son: Usuario ' . $username . ' Contraseña ' . $password . ' 
                     <a href="#" class="alert-link">Ir al inicio de sesión</a>
                     </div>';
-    
+
                 $conn = null;
                 header('refresh: 5; login.php');
-    
             } catch (PDOException $e) {
                 if ($e->getCode() == 23000) {
                     $conn = null;
@@ -61,7 +60,7 @@
         }
     } else {
         header('Location: 005registro.php');
-    }  
+    }
     ?>
 </body>
 

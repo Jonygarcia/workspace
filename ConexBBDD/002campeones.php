@@ -32,15 +32,15 @@ esos botones hará la correspondiente función dependiendo del id del campeón s
     ?>
 
         <a href="003editando.php?id=<?= $champion['id'] ?>"><button class="btn btn-primary">Editar</button></a>
-    
+
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal<?=$champion['id']?>">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal<?= $champion['id'] ?>">
             Borrar
         </button>
 
 
         <!-- Modal -->
-        <div class="modal fade" id="modal<?=$champion['id']?>" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal<?= $champion['id'] ?>" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -48,11 +48,11 @@ esos botones hará la correspondiente función dependiendo del id del campeón s
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ¿Está seguro que deseas borrar el campeón <?=$champion["name"]?>?
+                        ¿Está seguro que deseas borrar el campeón <?= $champion["name"] ?>?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <a href="deleteChamp.php?id=<?=$champion['id']?>"><button type="button" class="btn btn-primary">Estoy seguro</button></a>
+                        <a href="deleteChamp.php?id=<?= $champion['id'] ?>"><button type="button" class="btn btn-primary">Estoy seguro</button></a>
                     </div>
                 </div>
             </div>

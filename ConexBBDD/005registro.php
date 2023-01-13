@@ -11,7 +11,7 @@
     <title>005registro</title>
 </head>
 
-<body>  
+<body>
     <form action="006nuevoUsuario.php" method="POST">
         <div class="container col-8 col-lg-4">
             <h2 class="text-center mt-5 mb-5">REGISTRO</h2>
@@ -59,7 +59,6 @@
             <div class="text-center">
                 <button type="submit" class="btn btn-primary text-center">Enviar</button>
             </div>
-            
         </div>
     </form>
 </body>

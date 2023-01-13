@@ -1,7 +1,8 @@
 <?php
 include_once "conexion.php";
 
-function createUser($name, $username, $password, $email){
+function createUser($name, $username, $password, $email)
+{
 
     $conn = connectBdPDO();
 

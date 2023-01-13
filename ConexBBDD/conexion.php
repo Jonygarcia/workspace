@@ -18,7 +18,7 @@ function connectBdPDO()
     $user = "root";
     $password = "";
 
-    try{
+    try {
         $mbd = new PDO($dsn, $user, $password);
         $mbd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
